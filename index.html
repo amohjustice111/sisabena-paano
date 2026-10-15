@@ -20,7 +20,7 @@
     </a>
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
     <nav class="nav-links" aria-label="Main navigation">
-      <a href="#about">Our bakery</a><a href="#bread">Our bread</a><a href="#location">Find us</a>
+      <a href="#about">Our bakery</a><a href="#bread">Our bread</a><a href="#reviews">Reviews</a><a href="#location">Find us</a>
       <a class="nav-order" href="https://wa.me/233594842730?text=Hello%20Sister%20Abena%20Paano%20Tea%20Bread%2C%20I%27d%20like%20to%20ask%20about%20your%20bread." target="_blank" rel="noopener">Order on WhatsApp <span>↗</span></a>
     </nav>
   </header>
@@ -65,6 +65,25 @@
         <article class="order-card"><span class="order-spark">✳</span><div class="section-kicker">READY TO ORDER?</div><h3>Let’s get you<br>some bread.</h3><p>Message us on WhatsApp to ask about today’s bread and arrange your order.</p><a class="button button-light" href="https://wa.me/233594842730?text=Hello%20Sister%20Abena%20Paano%20Tea%20Bread%2C%20I%27d%20like%20to%20ask%20about%20today%27s%20bread." target="_blank" rel="noopener">Message us <span>↗</span></a></article>
       </div>
       <p class="availability-note">Product photos are temporary examples and will be replaced with your bakery’s own photo when you upload it.</p>
+
+      <div class="order-builder" id="order-form">
+        <div class="order-builder-intro"><div class="section-kicker">QUICK AND EASY</div><h3>Build your <em>bread order.</em></h3><p>Tell us what you need. We’ll open WhatsApp with your order details ready to send. We’ll confirm price and availability with you directly.</p></div>
+        <form id="whatsapp-order-form" class="order-form">
+          <label for="bread-choice">What would you like?</label>
+          <select id="bread-choice" name="bread" required><option value="Tea bread">Tea bread</option><option value="Bread availability enquiry">Ask what bread is available</option><option value="Bulk / family order">Bulk or family order</option></select>
+          <div class="form-two-col"><div><label for="bread-quantity">Quantity</label><input id="bread-quantity" name="quantity" type="number" min="1" max="500" value="1" required></div><div><label for="order-method">Collection or delivery?</label><select id="order-method" name="method"><option value="Collection / pickup">Collection / pickup</option><option value="Ask about delivery">Ask about delivery</option></select></div></div>
+          <label for="order-notes">Extra details (optional)</label><textarea id="order-notes" name="notes" rows="3" placeholder="For example: when you need it, your area, or any questions"></textarea>
+          <button class="button button-dark" type="submit">Continue on WhatsApp <span>↗</span></button>
+          <small class="form-note">No payment is taken on this website. Your order is sent to WhatsApp for confirmation.</small>
+        </form>
+      </div>
+    </section>
+
+    <section class="reviews-section section-pad" id="reviews">
+      <div class="reviews-heading"><div><div class="section-kicker">YOUR WORDS MATTER</div><h2>Enjoyed our bread?<br><em>Tell us about it.</em></h2></div><p>Customer feedback helps our little bakery grow. If you’ve tried our tea bread, we’d love to hear what you think.</p></div>
+      <div class="reviews-content"><div class="review-quote-card"><span class="quote-mark">“</span><h3>Help more people discover us.</h3><p>Your honest feedback can help neighbours find Sister Abena Paano Tea Bread. Send your review directly to us on WhatsApp.</p><div class="review-stars" aria-label="Five star rating scale">☆ ☆ ☆ ☆ ☆</div><small>Choose your own rating in the review form.</small></div>
+        <form id="whatsapp-review-form" class="review-form"><label for="review-name">Your name (optional)</label><input id="review-name" name="name" type="text" maxlength="60" placeholder="How should we address you?"><label for="review-rating">Your rating</label><select id="review-rating" name="rating" required><option value="5 stars">★★★★★ — Loved it</option><option value="4 stars">★★★★☆ — Very good</option><option value="3 stars">★★★☆☆ — Good</option><option value="2 stars">★★☆☆☆ — Could be better</option><option value="1 star">★☆☆☆☆ — Needs improvement</option></select><label for="review-message">Your review</label><textarea id="review-message" name="review" rows="4" required maxlength="600" placeholder="Tell us what you liked or what we could improve…"></textarea><button class="button button-dark" type="submit">Send review on WhatsApp <span>↗</span></button><small class="form-note">We don’t publish invented testimonials. Reviews can be displayed here once real customers give permission.</small></form>
+      </div>
     </section>
 
     <section class="location-section section-pad" id="location">
