@@ -1,63 +1,55 @@
-const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav-links');
-if (toggle && nav) {
-  toggle.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
-    toggle.textContent = open ? '×' : '☰';
-  });
-  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-    nav.classList.remove('open');
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Open navigation');
-    toggle.textContent = '☰';
-  }));
-}
-document.getElementById('year').textContent = new Date().getFullYear();
+(() => {
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
 
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav-links');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      toggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+      toggle.textContent = isOpen ? '×' : '☰';
+    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open navigation');
+      toggle.textContent = '☰';
+    }));
+  }
 
-// Prepare customer orders and reviews as WhatsApp messages.
-const bakeryWhatsApp = '233594842730';
-function openWhatsAppMessage(message) {
-  const url = `https://wa.me/${bakeryWhatsApp}?text=${encodeURIComponent(message)}`;
-  window.open(url, '_blank', 'noopener,noreferrer');
-}
+  const phone = '233594842730';
+  const openWhatsApp = message => {
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
 
-const orderForm = document.getElementById('whatsapp-order-form');
-if (orderForm) {
-  orderForm.addEventListener('submit', (event) => {
+  const orderForm = document.getElementById('whatsapp-order-form');
+  if (orderForm) orderForm.addEventListener('submit', event => {
     event.preventDefault();
-    const bread = document.getElementById('bread-choice').value;
-    const quantity = document.getElementById('bread-quantity').value;
-    const method = document.getElementById('order-method').value;
-    const notes = document.getElementById('order-notes').value.trim();
+    const data = new FormData(orderForm);
+    const quantity = Math.max(1, Number(data.get('quantity')) || 1);
+    const notes = String(data.get('notes') || '').trim();
     const message = [
       'Hello Sister Abena Paano Tea Bread! I would like to make an order.',
-      `Bread / enquiry: ${bread}`,
+      `Bread/order: ${data.get('bread')}`,
       `Quantity: ${quantity}`,
-      `Preference: ${method}`,
+      `Preference: ${data.get('method')}`,
       notes ? `Extra details: ${notes}` : '',
-      'Please confirm availability and the price. Thank you!'
+      'Please confirm availability and the total price. Thank you!'
     ].filter(Boolean).join('\n');
-    openWhatsAppMessage(message);
+    openWhatsApp(message);
   });
-}
 
-const reviewForm = document.getElementById('whatsapp-review-form');
-if (reviewForm) {
-  reviewForm.addEventListener('submit', (event) => {
+  const reviewForm = document.getElementById('whatsapp-review-form');
+  if (reviewForm) reviewForm.addEventListener('submit', event => {
     event.preventDefault();
-    const name = document.getElementById('review-name').value.trim();
-    const rating = document.getElementById('review-rating').value;
-    const review = document.getElementById('review-message').value.trim();
-    const message = [
-      'Hello Sister Abena Paano Tea Bread! I would like to share customer feedback.',
-      name ? `Name: ${name}` : '',
-      `Rating: ${rating}`,
-      `Review: ${review}`,
-      'You have my permission to receive this feedback privately. Please ask me before publishing my name or review publicly.'
-    ].filter(Boolean).join('\n');
-    openWhatsAppMessage(message);
+    const data = new FormData(reviewForm);
+    const name = String(data.get('name') || '').trim() || 'A customer';
+    const review = String(data.get('review') || '').trim();
+    if (!review) return;
+    const message = `Hello Sister Abena Paano Tea Bread! I would like to share customer feedback.\nName: ${name}\nRating: ${data.get('rating')}\nReview: ${review}\nYou may contact me if you need clarification.`;
+    openWhatsApp(message);
   });
-}
+})();
