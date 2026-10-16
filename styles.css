@@ -84,3 +84,22 @@ h1 em,h2 em{color:#b08d3d}
 .footer-bottom a{color:#15583b}
 .floating-whatsapp{background:#16834b;border:1px solid rgba(255,255,255,.3);box-shadow:0 10px 28px rgba(18,61,45,.25);border-radius:999px}
 @media(max-width:650px){.nav-links{background:#f7f8f0;box-shadow:0 12px 24px rgba(18,61,45,.1)}.hero{background:radial-gradient(ellipse at 90% 30%,rgba(216,230,204,.55),transparent 38%),var(--cream)}.photo-frame{border-radius:145px 145px 16px 16px}.order-card{border-radius:16px}}
+
+/* Bakery owner's supplied poster used as a subtle site background.
+   The pale green overlay keeps all website text readable. */
+body{
+  background-color:var(--cream);
+  background-image:linear-gradient(rgba(247,248,240,.92),rgba(247,248,240,.92)),url('sister-abena-bakery-poster.png');
+  background-position:center top;
+  background-size:cover;
+  background-attachment:fixed;
+}
+.hero{
+  background-image:linear-gradient(90deg,rgba(247,248,240,.97) 0%,rgba(247,248,240,.93) 48%,rgba(247,248,240,.78) 100%),url('sister-abena-bakery-poster.png');
+  background-position:center,center 35%;
+  background-size:cover;
+}
+@media(max-width:650px){
+  body{background-attachment:scroll;background-image:linear-gradient(rgba(247,248,240,.95),rgba(247,248,240,.95)),url('sister-abena-bakery-poster.png')}
+  .hero{background-image:linear-gradient(rgba(247,248,240,.94),rgba(247,248,240,.94)),url('sister-abena-bakery-poster.png');background-position:center;background-size:cover}
+}

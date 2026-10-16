@@ -24,3 +24,6 @@ Open `index.html` in a web browser. Submitting an order or review opens WhatsApp
 - Directions: https://maps.app.goo.gl/kMGcnmHuSaQVdSkR9
 
 The bread photos are temporary illustrative images from Unsplash and can be replaced with the owner's own photos later. The location panel links to the supplied Google Maps URL; its decorative map graphic is not a live map embed. No customer testimonials are invented; the review form sends feedback privately to the bakery via WhatsApp.
+
+
+Bakery background image: `sister-abena-bakery-poster.png` is the image supplied by the bakery owner. It is used with a pale green overlay so website text remains readable. Keep this image alongside `index.html` and `styles.css` when uploading the site.
