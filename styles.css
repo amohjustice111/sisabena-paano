@@ -4,3 +4,83 @@
 .order-builder{margin-top:42px;padding:clamp(24px,4vw,42px);background:var(--white);border:1px solid var(--line);display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,58px);align-items:start}.order-builder-intro h3,.reviews-heading h2{font-family:'Playfair Display',serif;font-size:clamp(31px,3.5vw,43px);line-height:1.18;color:var(--brown);font-weight:500;letter-spacing:-.035em;margin:12px 0}.order-builder-intro h3 em{color:#b78640}.order-builder-intro p,.reviews-heading>p{font-size:13px;line-height:1.9;color:var(--muted);max-width:420px}.order-form,.review-form{display:flex;flex-direction:column;gap:9px}.order-form label,.review-form label{font-size:11px;font-weight:700;color:var(--brown);margin-top:5px}.order-form input,.order-form select,.order-form textarea,.review-form input,.review-form select,.review-form textarea{width:100%;border:1px solid #ddceb7;background:#fffdf8;border-radius:2px;padding:12px 13px;font:inherit;font-size:12px;color:var(--ink);outline-color:var(--gold)}.order-form textarea,.review-form textarea{resize:vertical}.form-two-col{display:grid;grid-template-columns:.55fr 1.45fr;gap:14px}.form-two-col>div{display:flex;flex-direction:column;gap:9px}.order-form .button,.review-form .button{align-self:flex-start;margin-top:9px;border:0;cursor:pointer}.form-note{display:block;font-size:10px;line-height:1.7;color:#887866;margin-top:4px}.reviews-section{background:var(--white)}.reviews-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}.reviews-heading h2{font-size:clamp(36px,4vw,50px)}.reviews-heading>p{max-width:330px;margin-bottom:8px}.reviews-content{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px;align-items:stretch}.review-quote-card{background:#f0e3ce;padding:clamp(25px,4vw,42px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.quote-mark{font-family:'Playfair Display',serif;color:#b78640;font-size:60px;line-height:.8}.review-quote-card h3{font-family:'Playfair Display',serif;color:var(--brown);font-size:25px;font-weight:500;line-height:1.25;margin:15px 0 9px}.review-quote-card p{font-size:12px;line-height:1.9;color:var(--muted)}.review-stars{font-size:24px;letter-spacing:.12em;color:#b78640;margin:5px 0}.review-quote-card small{font-size:10px;color:#887866}.review-form{padding:clamp(22px,3vw,35px);border:1px solid var(--line);gap:8px}
 @media(max-width:750px){.order-builder{grid-template-columns:1fr;gap:22px}.reviews-heading{display:block}.reviews-heading>p{margin-top:16px}.reviews-content{grid-template-columns:1fr}.review-quote-card{min-height:260px}.form-two-col{grid-template-columns:1fr 1fr}}
 @media(max-width:420px){.form-two-col{grid-template-columns:1fr}.order-builder{padding:21px}.review-form{padding:20px}}
+
+/* Premium forest-green bakery refresh */
+:root{--cream:#f7f8f0;--cream2:#e9eee2;--brown:#123d2d;--brown2:#286247;--gold:#c6a45b;--ink:#183328;--muted:#64766b;--white:#fffef9;--line:#dce5d9;--green:#16834b}
+body{background:var(--cream);color:var(--ink)}
+.topline{background:#0d3023;color:#e8efdf}
+.topline span{color:#d7bd77}
+.site-header{background:rgba(247,248,240,.96);border-bottom-color:#dce5d9}
+.brand-mark{border-color:#c6a45b;color:#1b6a46;background:linear-gradient(145deg,#fffef9,#edf3e8)}
+.brand-copy strong{color:#123d2d}.brand-copy small{color:#9b7a35}
+.nav-links>a:not(.nav-order):hover,.text-link:hover{color:#258553}
+.nav-order,.button-dark{background:#15583b;color:#fffef8;border-radius:999px;box-shadow:0 7px 18px rgba(18,61,45,.12)}
+.nav-order:hover,.button-dark:hover{background:#0d402b}
+.eyebrow,.section-kicker{color:#2b7650}
+h1,h2,.order-card h3{color:#123d2d}
+h1 em,h2 em{color:#b08d3d}
+.hero{background:radial-gradient(ellipse at 85% 20%,rgba(216,230,204,.55),transparent 38%),var(--cream)}
+.hero-text,.about-copy,.bread-heading>p,.order-builder-intro p,.reviews-heading>p{color:#64766b}
+.button{border-radius:999px;min-height:51px;padding:0 24px}
+.text-link{border-bottom-color:#b7cdb8}
+.text-link span{color:#b08d3d}
+.note-icon{border-color:#c9d9c6;color:#b08d3d;background:#fffef9}
+.hero-note strong{color:#123d2d}
+.photo-frame{border-radius:180px 180px 18px 18px;box-shadow:0 24px 65px rgba(22,65,43,.14)}
+.photo-frame img{filter:saturate(.92)}
+.photo-label{border-radius:12px;box-shadow:0 10px 28px rgba(18,61,45,.12)}
+.label-star{color:#b08d3d}
+.round-stamp{background:#175c3e;border-color:var(--cream);color:#f7f4e8;box-shadow:0 10px 30px rgba(18,61,45,.18)}
+.round-stamp b{color:#d6bd78}
+.decor{color:#b7a05e}
+.promise-strip{background:#e6eddf;border-color:#d6e1d2;color:#184a33}
+.promise-strip span{color:#a1843f}
+.about{background:#fffef9}
+.bread-section{background:#f4f6ed}
+.bread-card{border:1px solid #e1e8dd;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(24,68,45,.045);transition:transform .25s,box-shadow .25s}
+.bread-card:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(24,68,45,.1)}
+.bread-card>img{height:220px}
+.card-number{color:#a1843f}
+.bread-card h3{color:#123d2d}
+.order-card{background:linear-gradient(145deg,#1c6846,#0e3b2a);border-radius:16px;color:#f7f8f0}
+.order-spark{color:#b7a05e}
+.order-card .section-kicker{color:#dfcb8d}
+.order-card h3{color:#fffdf4}
+.order-card p{color:#d5e4d5}
+.button-light{background:#f8f7ed;color:#154630;border-radius:999px}
+.availability-note{color:#718276}
+.order-builder{background:#fffef9;border:1px solid #dce5d9;border-radius:20px;box-shadow:0 18px 48px rgba(24,68,45,.06)}
+.order-builder-intro h3,.reviews-heading h2{color:#123d2d}
+.order-builder-intro h3 em{color:#b08d3d}
+.order-form label,.review-form label{color:#194d34}
+.order-form input,.order-form select,.order-form textarea,.review-form input,.review-form select,.review-form textarea{border:1px solid #d5e1d4;background:#fbfcf7;border-radius:10px;outline-color:#258553}
+.order-form .button,.review-form .button{border:0}
+.form-note{color:#738478}
+.reviews-section{background:#fffef9}
+.review-quote-card{background:linear-gradient(145deg,#eaf1e4,#f4f5e9);border:1px solid #dce7d7;border-radius:16px}
+.quote-mark,.review-stars{color:#b08d3d}
+.review-quote-card h3{color:#123d2d}
+.review-quote-card p{color:#64766b}
+.review-form{border:1px solid #dce5d9;border-radius:16px;background:#fffefc}
+.location-section{background:#eaf0e4}
+.location-copy h2{color:#123d2d}
+.pin,.map-caption-icon{background:#d8e6d3;color:#15583b}
+.map-card{background:#fffef9;border-radius:18px;box-shadow:0 18px 48px rgba(18,61,45,.1)}
+.map-art{background-color:#e6eddf;background-image:linear-gradient(35deg,transparent 49.5%,#d0ddca 50%,transparent 50.7%),linear-gradient(120deg,transparent 48%,#d0ddca 48.4%,#d0ddca 49.2%,transparent 49.6%),linear-gradient(0deg,rgba(190,210,180,.3) 1px,transparent 1px)}
+.road{background:#fffef8;border-color:#d6dfd0}
+.map-block,.block-d{background:#cbdcc2}.block-b,.block-c{background:#d4e3ca}
+.map-pin{background:#15583b;border-color:#f7f8f0}
+.map-pin span{color:#e1c778}
+.map-caption strong{color:#123d2d}.map-caption>a{color:#a1843f}
+.contact-band{background:linear-gradient(110deg,#0d3023,#17583c);color:#f7f8f0}
+.contact-band .section-kicker{color:#dfcb8d}
+.contact-band h2{color:#fffef7}
+.contact-band p{color:#d3e0d3}
+.whatsapp-mark{color:#16834b}
+.site-footer{background:#f7f8f0}
+.footer-brand .brand-mark{background:#fffef9}
+.site-footer>p{color:#286247}
+.footer-bottom{border-top-color:#dce5d9;color:#738276}
+.footer-bottom a{color:#15583b}
+.floating-whatsapp{background:#16834b;border:1px solid rgba(255,255,255,.3);box-shadow:0 10px 28px rgba(18,61,45,.25);border-radius:999px}
+@media(max-width:650px){.nav-links{background:#f7f8f0;box-shadow:0 12px 24px rgba(18,61,45,.1)}.hero{background:radial-gradient(ellipse at 90% 30%,rgba(216,230,204,.55),transparent 38%),var(--cream)}.photo-frame{border-radius:145px 145px 16px 16px}.order-card{border-radius:16px}}
