@@ -103,3 +103,35 @@ body{
   body{background-attachment:scroll;background-image:linear-gradient(rgba(247,248,240,.95),rgba(247,248,240,.95)),url('sister-abena-bakery-poster.png')}
   .hero{background-image:linear-gradient(rgba(247,248,240,.94),rgba(247,248,240,.94)),url('sister-abena-bakery-poster.png');background-position:center;background-size:cover}
 }
+
+
+/* Make the owner's poster clearly visible throughout the entire page, while keeping text readable. */
+body{
+  background-color:#e9eee2;
+  background-image:linear-gradient(rgba(247,248,240,.48),rgba(247,248,240,.48)),url("sister-abena-bakery-poster.png");
+  background-position:center top;
+  background-size: min(100%, 1050px) auto;
+  background-repeat:repeat-y;
+  background-attachment:fixed;
+}
+.site-header{background:rgba(247,248,240,.94)}
+.hero{
+  background-image:linear-gradient(90deg,rgba(247,248,240,.83) 0%,rgba(247,248,240,.70) 52%,rgba(247,248,240,.45) 100%),url("sister-abena-bakery-poster.png");
+  background-position:center,center 30%;
+  background-size:cover;
+}
+.photo-frame{height:auto;aspect-ratio:2/3;max-height:610px;border-radius:24px; background:#123d2d}
+.photo-frame img{object-fit:contain;object-position:center;background:#123d2d;filter:none}
+.about{background:rgba(255,254,249,.84)}
+.bread-section{background:rgba(244,246,237,.84)}
+.reviews-section{background:rgba(255,254,249,.86)}
+.location-section{background:rgba(234,240,228,.86)}
+.site-footer{background:rgba(247,248,240,.94)}
+.promise-strip{background:rgba(230,237,223,.92)}
+.order-builder,.review-form,.map-card{background:rgba(255,254,249,.96)}
+.bread-card{background:rgba(255,254,249,.96)}
+@media(max-width:650px){
+  body{background-attachment:scroll;background-size:100% auto;background-repeat:repeat-y;background-image:linear-gradient(rgba(247,248,240,.55),rgba(247,248,240,.55)),url("sister-abena-bakery-poster.png")}
+  .hero{background-image:linear-gradient(rgba(247,248,240,.78),rgba(247,248,240,.68)),url("sister-abena-bakery-poster.png");background-position:center,center top;background-size:cover}
+  .photo-frame{aspect-ratio:2/3;height:auto;max-height:none;border-radius:18px}
+}

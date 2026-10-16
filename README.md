@@ -27,3 +27,6 @@ The bread photos are temporary illustrative images from Unsplash and can be repl
 
 
 Bakery background image: `sister-abena-bakery-poster.png` is the image supplied by the bakery owner. It is used with a pale green overlay so website text remains readable. Keep this image alongside `index.html` and `styles.css` when uploading the site.
+
+
+The supplied `sister-abena-bakery-poster.png` is used both as the visible hero poster and as the site-wide background. Semi-transparent cream/green overlays and solid content cards keep text legible. Keep the PNG beside `index.html`, `styles.css`, and `script.js` when uploading.
